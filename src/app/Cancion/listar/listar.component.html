@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="card">
+    <div class="card-header">
+      <h3>Canciones</h3>
+    </div>
+    <div class="card-body">
+      <table class="table table-hover">
+        <thead>
+          <tr class="text-center">
+            <th>ID</th>
+            <th>NOMBRE</th>
+            <th>IDIOMA</th>
+            <th>GENERO</th>
+            <th>ACCIONES</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let cancion of canciones" class="text-center">
+            <td>{{cancion.id}}</td>
+            <td>{{cancion.name}}</td>
+            <td>{{cancion.idioma}}</td>
+            <td>{{cancion.genero}}</td>
+            <td>
+              <button (click)="Editar(cancion)" class="btn btn-warning">Editar</button>
+              <button (click)="Delete(cancion)" class="btn btn-danger" style="margin-left: 10px;">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
